@@ -4,20 +4,20 @@ import java.time.Duration;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class Test1 {
   @Test
   public void test1Method() {
 	  
-	  System.setProperty("webdriver.gecko.driver","./drivers/geckodriver.exe");
+	  System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
 
-		EdgeOptions eo = new EdgeOptions();
-		eo.addArguments("--remote-allow-origins=*");
+		ChromeOptions co = new ChromeOptions();
+		co.addArguments("--remote-allow-origins=*");
 
-		WebDriver driver= new EdgeDriver(eo);
+		WebDriver driver= new ChromeDriver(co);
 		driver.manage().window().maximize();
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -27,4 +27,5 @@ public class Test1 {
 		driver.switchTo().activeElement().sendKeys("Java",Keys.ENTER);
 		
   }
+  
 }

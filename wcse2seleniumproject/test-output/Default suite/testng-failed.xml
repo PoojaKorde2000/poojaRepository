@@ -3,16 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGAnnotations.GoogleSearchTestCase">
+      <class name="testNGExecuton.SelectBrowser">
         <methods>
-          <include name="search3"/>
-          <include name="search2"/>
-          <include name="search1"/>
-          <include name="propertyMethod"/>
-          <include name="teardown"/>
-          <include name="setUp"/>
+          <include name="method1"/>
         </methods>
-      </class> <!-- testNGAnnotations.GoogleSearchTestCase -->
+      </class> <!-- testNGExecuton.SelectBrowser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="EdgeTest(failed)">
+    <parameter name="browserValue" value="edge"/>
+    <parameter name="Vpassword" value="manager"/>
+    <parameter name="Vusername" value="admin"/>
+    <parameter name="url" value="http://desktop-81grub6/login.do"/>
     <classes>
-      <class name="testNGAnnotations.GoogleSearchTestCase">
+      <class name="testNGExecuton.SelectBrowser">
         <methods>
-          <include name="search3"/>
-          <include name="search2"/>
-          <include name="search1"/>
-          <include name="propertyMethod"/>
-          <include name="teardown"/>
-          <include name="setUp"/>
+          <include name="method1" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testNGAnnotations.GoogleSearchTestCase -->
+      </class> <!-- testNGExecuton.SelectBrowser -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- EdgeTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
